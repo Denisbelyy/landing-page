@@ -1,0 +1,103 @@
+.country{
+	@include flex(row, space-between, end);
+	position: relative;
+	
+	@include screen (1366px){
+		&:after, &:before{
+			display: none;
+		}
+	}
+	@include screen (768px){
+		@include flex(column, center, center);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		width: 1000px;
+		height: 10px;
+		background: #BB1D2C;
+		left: -81%;
+		top: 45%;
+		z-index: -1;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		width: 1000px;
+		height: 10px;
+		background: #BB1D2C;
+		right: -81%;
+		top: 45%;
+		z-index: -1;
+	}
+	.country__item{
+
+		@include screen (768px){
+			width: 50%;
+		}
+		@include screen(340px){
+			width: 100%;
+		}
+
+		width: 20%;
+		padding:65px;
+		box-sizing:border-box;
+		position: relative;
+
+		.country__title{
+			color:#fff;
+			text-align: center;
+			font-weight: bold;
+
+		}
+		&:first-child{
+			@include screen (768px){
+				&:after{display: none;}
+			}
+			&:after{
+				content: '';
+			    position: absolute;
+			    width: 10px;
+			    height: 10px;
+			    background: #BB1D2C;
+			    left: -25px;
+			    top: 45%;
+			}
+		}
+		&:last-child{
+			@include screen (768px){
+					&:before{display: none;}
+				}
+			&:before{
+				content: '';
+			    position: absolute;
+			    width: 10px;
+			    height: 10px;
+			    background: #BB1D2C;
+			    right: -25px;
+			    top: 45%;
+			}
+		}
+
+	}
+	.country__item-norway{
+		background: url('../../img/norway.png') no-repeat;
+		background-size:cover;
+	}
+
+	.country__item-sweden{
+		background: url('../../img/sweden.png') no-repeat;
+		background-size:cover;
+	}
+
+	.country__item-germany{
+		background: url('../../img/germany.png') no-repeat;
+		background-size:cover;
+	}
+
+	.country__item-netherlands{
+		background: url('../../img/netherlands.png') no-repeat;
+		background-size:cover;
+	}
+}

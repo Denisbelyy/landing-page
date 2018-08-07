@@ -1,0 +1,30 @@
+.p-block__company{
+	width: 90%;
+	margin:0 auto;
+}
+.company{
+	@include flex(row, space-between, end);
+	position: relative;
+	
+	.company__item{
+		width: 92%;
+		box-sizing:border-box;
+		position: relative;
+
+		.company__img{
+			border-bottom:4px solid $color_red_border;
+			height: 120px;
+
+			.company__img-image{
+				max-height: 100%;
+			}
+		}
+
+		.company__title {
+		    color: gray;
+		    text-align: center;
+		    padding: 15px;
+		    font-size: 1.2em;
+		}
+	}
+}

@@ -1,0 +1,74 @@
+.block_about_bg{
+	background:#fff url('../../img/company_bg.png') no-repeat center center;
+	background-size:cover;
+}
+.block_about{
+	padding:140px 80px;
+	margin:0 auto;
+	max-width: 600px;
+	@include flex(row, center, end);
+	
+	@include screen(768px){
+		@include flex(row,center,flex-start);
+		padding:30px 15px;
+	}
+	.block_about__play{
+	    width: 100px;
+	    background: #fff;
+	    height: 100px;
+	    position: relative;
+		
+		@include screen(768px){
+			width: 50px;
+			height: 50px;
+			padding:15px;
+		}
+
+		.block_about__play_icon{
+		    width: 0px;
+		    height: 0px;
+		    border: 18px solid transparent;
+		    border-left: 29px solid #465058;
+		    position: absolute;
+		    top: 34%;
+    		left: 41%;
+
+    		@include screen(768px){
+				top:30%;
+			}
+		}
+	}
+
+	.block_about__content{
+		width: 500px;
+		background:rgba(70, 83, 102, 0.83);
+		color:#fff;
+	    padding: 55px 40px 70px;
+	    box-sizing: border-box;
+	    position: relative;
+		
+		@include screen(768px){
+			width: 70%;
+			padding:35px;
+		}
+
+		.block_about__title{
+			color:#fff;
+		}
+		
+		.block_about__red_square{
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			background:$background-red;
+			top:-40px;
+			left: 0;
+
+			@include screen(768px){
+				width: 20px;
+				height: 20px;
+				top:-20px;
+			}
+		}
+	}
+}

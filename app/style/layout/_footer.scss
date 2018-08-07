@@ -1,0 +1,46 @@
+.footer{
+	width: 100%;
+	background:#272A2E;
+
+	.p-block{
+		@include flex(column, flex-start, flex-start);
+		padding:40px 80px;
+
+		@include screen (768px){
+			padding:15px;
+		}
+
+		.t-menu{
+			margin:20px 0;
+			width: 100%;
+
+			.menu-link{
+
+				.m-link{
+					color:#fff;
+
+					&:first-child{
+						padding-left:0;
+						margin-left:0;
+					}
+				}
+			}
+
+			.t-lang{
+				float: right;
+			    margin-top: -35px;
+			    color: #fff;
+			}
+			
+		}
+	}
+
+	.copyright{
+
+		.copyright__text{
+			color:#fff;
+			font-size:0.7em;
+		}
+	}
+	
+}
